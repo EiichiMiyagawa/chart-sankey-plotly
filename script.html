@@ -1,0 +1,63 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+  <title>chart-sankey demo</title>
+</head>
+<body style="text-align:center">
+  
+  <h1>chart-sankey tag demo by script</h1>
+  
+  <div id=p></div>
+  
+  <script type="module">
+    import { ChartSankey } from "./chart-sankey.js";
+    
+    const data = [
+      {
+        name1: "A1",
+        name2: "B1",
+        count: 10
+      },
+      {
+        name1: "A2",
+        name2: "B1",
+        count: 5
+      },
+      {
+        name1: "A1",
+        name2: "B2",
+        count: 10
+      },
+      {
+        name1: "A2",
+        name2: "B2",
+        count: 2
+      },
+      {
+        name1: "B1",
+        name2: "C1",
+        count: 2
+      },
+      {
+        name1: "B1",
+        name2: "C3",
+        count: 3
+      },
+      {
+        name1: "B2",
+        name2: "C3",
+        count: 12
+      },
+      {
+        name1: "B1",
+        name2: "C2",
+        count: 10
+      },
+    ];
+    const sankey = new ChartSankey(data, {
+      title: "test sankey",
+      width: window.innerWidth - 50,
+      height: 600
+    });
+    p.appendChild(sankey);
+  </script>
+</body>
+</html>
