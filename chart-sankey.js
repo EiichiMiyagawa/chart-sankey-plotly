@@ -6,7 +6,7 @@ class ChartSankey extends HTMLElement {
     super();
     
     if (data !== undefined) {
-      this.setData(dataList, options);
+      this.setData(data, options);
     } else {
       const src = this.getAttribute("src");
       if (src) {
